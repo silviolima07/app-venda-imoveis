@@ -81,7 +81,7 @@ def main():
             status = checar_retorno(send_request)
             
             #st.sidebar.markdown(" ")
-            st.markdown(status)
+            st.markdown("R$ "+status)
 
            
 
