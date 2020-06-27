@@ -62,7 +62,7 @@ def main():
       
     st.sidebar.markdown(" ") 
     st.sidebar.markdown("#### Selecione as caracteristicas")
-    st.sidebar.mkardown("#### Preveja o valor do apartamento")
+    st.sidebar.markdown("#### Preveja o valor do apartamento")
     st.sidebar.markdown(" ")
 
     if st.sidebar.button('Submit'):
