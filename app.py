@@ -61,7 +61,8 @@ def main():
     url = 'https://app-api-001.herokuapp.com/'
       
     st.sidebar.markdown(" ") 
-    st.sidebar.markdown("#### Prever o valor do apartamento")
+    st.sidebar.markdown("#### Selecione as caracteristicas")
+    st.sidebar.mkardown("#### Preveja o valor do apartamento")
     st.sidebar.markdown(" ")
 
     if st.sidebar.button('Submit'):
@@ -77,11 +78,11 @@ def main():
             st.warning("Houston we have a problem.")
        
         elif send_request.ok:
-            st.markdown('#### Previsão do modelo:')
+            st.sidebar.markdown('### Previsão do modelo:')
             status = checar_retorno(send_request)
             
             #st.sidebar.markdown(" ")
-            st.title("R$ "+status)
+            st.sidebar.title("R$ "+status)
 
            
 
