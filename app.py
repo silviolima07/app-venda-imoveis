@@ -36,12 +36,12 @@ def main():
     st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)     
 
     #st.markdown("### Selecione as caracteristicas do apartamento")
-    area_total = st.slider('Área Total',min_value=100, max_value=500, value=200, step=50)
-    area_util = st.slider('Área Útil',min_value=100, max_value=500, value=250, step=50)
+    area_total = st.slider('Área Total',min_value=50, max_value=500, value=200, step=20)
+    area_util = st.slider('Área Útil',min_value=50, max_value=500, value=250, step=20)
 
-    quarto = st.radio('Quarto',(1 , 2, 3, 4, 5))
-    banheiro = st.radio('Banheiro',(1,2,3,4,5,6))
-    vaga = st.radio('Vaga',(1,2,3,4,5,6))
+    quarto = st.radio('Quarto',(1 , 2, 3, 4, 5,6))
+    banheiro = st.radio('Banheiro',(1,2,3,4,5,6,7))
+    vaga = st.radio('Vaga',(1,2,3,4,5,6,7,8,9,10))
 
     #quarto = st.slider('Quarto',min_value=1, max_value=6, value=1, step=1)
     #banheiro = st.slider('Banheiro',min_value=1, max_value=6, value=1, step=1)
@@ -89,6 +89,7 @@ def main():
             
             #st.sidebar.markdown(" ")
             st.sidebar.title("R$ "+status)
+            st.sidebar.title("R$ "+status[0]+'.'+status[-6:4]+'.'+status[-3:])
 
            
 
