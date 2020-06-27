@@ -47,8 +47,9 @@ def main():
     #cloud = Image.open("cloud.png")
     #st.image(cloud,caption="",use_column_width=True)
     
-    data = [{'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}]
+    #data = [{'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}]
         
+    
     # Choosen data
     data = {'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
     
