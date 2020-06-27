@@ -26,7 +26,7 @@ def main():
     #          """
     #st.markdown(html_page, unsafe_allow_html=True)    
 
-    #image = Image.open("titanic.png")
+    image = Image.open("vende-se.png")
     st.sidebar.image(image,caption="",use_column_width=True)
 
     #st.sidebar.markdown("#### --> Streamlit") 
