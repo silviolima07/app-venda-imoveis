@@ -38,8 +38,8 @@ def main():
     #st.markdown("### Selecione as caracteristicas do apartamento")
     area_total = st.slider('Área Total',min_value=100, max_value=500, value=200, step=50)
     area_util = st.slider('Área Útil',min_value=100, max_value=500, value=250, step=50)
-    quarto = st.slider('Quarto',min_value=1, max_value=6, value=2, step=1)
-    banheiro = st.slider('Banheiro',min_value=1, max_value=6, value=2, step=1)
+    quarto = st.slider('Quarto',min_value=1, max_value=6, value=1, step=1)
+    banheiro = st.slider('Banheiro',min_value=1, max_value=6, value=1, step=1)
     vaga = st.slider('Vaga', min_value=1, max_value=5, value=1, step=1)
     #st.markdown("#### Caracteristicas selecionadas do passageiro")
     #st.write('Caracteristicas: '+ classe,'---', sexo, '---',embarque,'---',idade,"anos",'---','$$',passagem)
@@ -62,10 +62,10 @@ def main():
       
     st.sidebar.markdown(" ") 
     st.sidebar.markdown("#### 1- Selecione as caracteristicas")
-    st.sidebar.markdown("#### 2- Veja o valor do apartamento")
+    st.sidebar.markdown("#### 2- Veja o valor previsto do apartamento")
     st.sidebar.markdown(" ")
 
-    if st.sidebar.button('Submit'):
+    if st.sidebar.button('Enviar consulta'):
         bar = st.progress(0)
         for i in range(11):
             bar.progress(i * 10)
