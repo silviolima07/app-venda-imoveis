@@ -15,7 +15,7 @@ def main():
     """ ExtraTreesRegressor - Imoveis """
     
     ## Titulo
-    st.sidebar.title("-> Regressão")
+    #st.sidebar.title("-> Regressão")
     
     #st.markdown("## Streamlit - Titanic")
  
@@ -44,8 +44,8 @@ def main():
     #st.markdown("#### Caracteristicas selecionadas do passageiro")
     #st.write('Caracteristicas: '+ classe,'---', sexo, '---',embarque,'---',idade,"anos",'---','$$',passagem)
 
-    cloud = Image.open("cloud.png")
-    st.image(cloud,caption="",use_column_width=True)
+    #cloud = Image.open("cloud.png")
+    #st.image(cloud,caption="",use_column_width=True)
     
     data = [{'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}]
         
