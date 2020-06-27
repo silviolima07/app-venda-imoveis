@@ -91,7 +91,7 @@ def main():
             if len(status) == 6:
                 st.sidebar.title("R$ "+status[0:3]+'.'+status[3:])
             else:  
-                st.sidebar.title("R$ "+status[0]+'.'+status[-6:4]+'.'+status[-3:])
+                st.sidebar.title("R$ "+status[0:]+'.'+status[-6:4]+'.'+status[-3:])
 
            
 
