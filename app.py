@@ -61,8 +61,8 @@ def main():
     url = 'https://app-api-001.herokuapp.com/'
       
     st.sidebar.markdown(" ") 
-    st.sidebar.markdown("#### Selecione as caracteristicas")
-    st.sidebar.markdown("#### Preveja o valor do apartamento")
+    st.sidebar.markdown("#### 1- Selecione as caracteristicas")
+    st.sidebar.markdown("#### 2- Veja o valor do apartamento")
     st.sidebar.markdown(" ")
 
     if st.sidebar.button('Submit'):
