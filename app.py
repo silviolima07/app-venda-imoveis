@@ -15,7 +15,7 @@ def main():
     """ ExtraTreesRegressor - Imoveis """
     
     ## Titulo
-    st.sidebar.title("-> Regressão - Apartamentos")
+    st.sidebar.title("-> Regressão")
     
     #st.markdown("## Streamlit - Titanic")
  
@@ -30,7 +30,7 @@ def main():
     st.sidebar.image(image,caption="",use_column_width=True)
 
     #st.sidebar.markdown("#### --> Streamlit") 
-    st.sidebar.markdown("#### > ExtraTreesRegressor (api Heroku)")
+    #st.sidebar.markdown("#### > ExtraTreesRegressor (api Heroku)")
     #st.sidebar.markdown("#### --> Modelo alocado no Heroku")
 
     st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)     
@@ -77,11 +77,11 @@ def main():
             st.warning("Houston we have a problem.")
        
         elif send_request.ok:
-            st.sidebar.markdown('#### Previsão do modelo:')
+            st.markdown('#### Previsão do modelo:')
             status = checar_retorno(send_request)
             
             #st.sidebar.markdown(" ")
-            st.markdown("R$ "+status)
+            st.title("R$ "+status)
 
            
 
