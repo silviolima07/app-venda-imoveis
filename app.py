@@ -90,8 +90,10 @@ def main():
             #st.sidebar.markdown(" ")
             if len(status) == 6:
                 st.sidebar.title("R$ "+status[0:3]+'.'+status[3:])
-            else:  
-                st.sidebar.title("R$ "+status[0:]+'.'+status[-6:4]+'.'+status[-3:])
+            elif len (status) == 7:  
+                st.sidebar.title("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
+            else:
+                st.sidebar.title("R$ "+status[0:2]+'.'+status[2:5]+'.'+status[5:])
 
            
 
