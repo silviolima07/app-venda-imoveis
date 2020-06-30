@@ -12,6 +12,11 @@ def checar_retorno(send_request):
   return status
 
 
+df_bairros = pd.read_csv("modelos_bairros.csv")
+
+lista_bairros = list(df_bairros.Bairro)
+
+
 
 def main():
     """ ExtraTreesRegressor - Imoveis """
@@ -37,10 +42,10 @@ def main():
 
     st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
-    df_bairros = pd.read_csv("modelos_bairros.csv")     
+         
 
-    menu_bairro = [df_bairros.Bairro]
-    bairro_escolhido = st.selectbox("Bairro",menu_bairro)
+    # Escolher o bairro para o qual o regressor deve fazer as previsões
+    bairro_escolhido = st.selectbox("Bairro",lista_bairros)
     
     
 
