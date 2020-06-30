@@ -3,12 +3,14 @@ import requests
 import ujson as json
 from PIL import Image
 import time
+import pandas as pd
 
 def checar_retorno(send_request):
   data = send_request.json()
   temp = str(data).split()[2]
   status = temp.replace('}}', '')
   return status
+
 
 
 def main():
@@ -33,7 +35,14 @@ def main():
     #st.sidebar.markdown("#### > ExtraTreesRegressor (api Heroku)")
     #st.sidebar.markdown("#### --> Modelo alocado no Heroku")
 
-    st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)     
+    st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+
+    df_bairros = pd.read_csv("modelos_bairros.csv")     
+
+    menu_bairro = [df_bairros.Bairro]
+    bairro_escolhido = st.selectbox("Bairro",menu_bairro)
+    
+    
 
     #st.markdown("### Selecione as caracteristicas do apartamento")
     area_total = st.slider('Área Total',min_value=50, max_value=500, value=200, step=20)
@@ -56,7 +65,7 @@ def main():
         
     
     # Choosen data
-    data = {'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
+    data = {'bairro': bairro_escolhido, 'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
     
     # Formato json 
     data = json.dumps(data)
