@@ -4,6 +4,7 @@ import ujson as json
 from PIL import Image
 import time
 import pandas as pd
+import  numpy as np
 
 def checar_retorno(send_request):
   data = send_request.json()
@@ -100,6 +101,8 @@ def main():
         elif send_request.ok:
             st.sidebar.markdown('### Previsão do modelo:')
             status = checar_retorno(send_request)
+            print("Valor recebido do modelo:", status)
+            print("Tipo:", type(status))
             
             #st.sidebar.markdown(" ")
             if len(status) == 6:
