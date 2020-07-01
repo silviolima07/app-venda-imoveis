@@ -99,7 +99,7 @@ def main():
             st.warning("Houston we have a problem.")
        
         elif send_request.ok:
-            st.sidebar.markdown('### Previsão do modelo:')
+            st.markdown('### Previsão do modelo:')
             status = checar_retorno(send_request)
             print("Valor recebido do modelo:", status)
             print("Tipo:", type(status))

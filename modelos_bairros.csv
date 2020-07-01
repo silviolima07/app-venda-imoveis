@@ -1,98 +1,108 @@
-,Bairro,Modelo_treinado,R2 score
-0,Moema,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
-                      max_depth=None, max_features='auto', max_leaf_nodes=None,
-                      max_samples=None, min_impurity_decrease=0.0,
-                      min_impurity_split=None, min_samples_leaf=1,
-                      min_samples_split=2, min_weight_fraction_leaf=0.0,
-                      n_estimators=150, n_jobs=None, oob_score=False,
-                      random_state=None, verbose=0, warm_start=False)",0.9524200708085303
-2,Perdizes,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
-                      max_depth=None, max_features='auto', max_leaf_nodes=None,
-                      max_samples=None, min_impurity_decrease=0.0,
-                      min_impurity_split=None, min_samples_leaf=1,
-                      min_samples_split=2, min_weight_fraction_leaf=0.0,
-                      n_estimators=150, n_jobs=None, oob_score=False,
-                      random_state=None, verbose=0, warm_start=False)",0.9338390742883615
-5,Brooklin,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
-                      max_depth=None, max_features='auto', max_leaf_nodes=None,
-                      max_samples=None, min_impurity_decrease=0.0,
-                      min_impurity_split=None, min_samples_leaf=1,
-                      min_samples_split=2, min_weight_fraction_leaf=0.0,
-                      n_estimators=150, n_jobs=None, oob_score=False,
-                      random_state=None, verbose=0, warm_start=False)",0.895256032871249
-6,Jardim Paulista,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+,Bairro,Algoritmo,Modelo_treinado,R2 score
+0,Moema,ExtraTreesRegressor,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
                     max_depth=None, max_features='auto', max_leaf_nodes=None,
                     max_samples=None, min_impurity_decrease=0.0,
                     min_impurity_split=None, min_samples_leaf=1,
                     min_samples_split=2, min_weight_fraction_leaf=0.0,
                     n_estimators=150, n_jobs=None, oob_score=False,
-                    random_state=None, verbose=0, warm_start=False)",0.8891364972857806
-7,Pinheiros,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
-                    max_depth=None, max_features='auto', max_leaf_nodes=None,
-                    max_samples=None, min_impurity_decrease=0.0,
-                    min_impurity_split=None, min_samples_leaf=1,
-                    min_samples_split=2, min_weight_fraction_leaf=0.0,
-                    n_estimators=150, n_jobs=None, oob_score=False,
-                    random_state=None, verbose=0, warm_start=False)",0.8522862307930366
-8,Vila Mariana,"KNeighborsRegressor(algorithm='auto', leaf_size=30, metric='minkowski',
+                    random_state=None, verbose=0, warm_start=False)",0.9570079216093546
+2,Perdizes,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                      max_depth=None, max_features='auto', max_leaf_nodes=None,
+                      max_samples=None, min_impurity_decrease=0.0,
+                      min_impurity_split=None, min_samples_leaf=1,
+                      min_samples_split=2, min_weight_fraction_leaf=0.0,
+                      n_estimators=150, n_jobs=None, oob_score=False,
+                      random_state=None, verbose=0, warm_start=False)",0.873126344766326
+3,Itaim_Bibi,KNeighborsRegressor,"KNeighborsRegressor(algorithm='auto', leaf_size=30, metric='minkowski',
                     metric_params=None, n_jobs=None, n_neighbors=5, p=2,
-                    weights='uniform')",0.9033521316807932
-9,Vila Nova Conceição,"KNeighborsRegressor(algorithm='auto', leaf_size=30, metric='minkowski',
-                    metric_params=None, n_jobs=None, n_neighbors=5, p=2,
-                    weights='uniform')",0.8314579721396637
-10,Vila Mascote,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                    weights='uniform')",0.9298140898770759
+5,Brooklin,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
                       max_depth=None, max_features='auto', max_leaf_nodes=None,
                       max_samples=None, min_impurity_decrease=0.0,
                       min_impurity_split=None, min_samples_leaf=1,
                       min_samples_split=2, min_weight_fraction_leaf=0.0,
                       n_estimators=150, n_jobs=None, oob_score=False,
-                      random_state=None, verbose=0, warm_start=False)",0.9177454636506963
-11,Jardim Marajoara,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                      random_state=None, verbose=0, warm_start=False)",0.9079497045031324
+6,Jardim_Paulista,ExtraTreesRegressor,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
                     max_depth=None, max_features='auto', max_leaf_nodes=None,
                     max_samples=None, min_impurity_decrease=0.0,
                     min_impurity_split=None, min_samples_leaf=1,
                     min_samples_split=2, min_weight_fraction_leaf=0.0,
                     n_estimators=150, n_jobs=None, oob_score=False,
-                    random_state=None, verbose=0, warm_start=False)",0.9502603030782263
-13,Vila Romana,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                    random_state=None, verbose=0, warm_start=False)",0.9440493694765248
+7,Pinheiros,ExtraTreesRegressor,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
                     max_depth=None, max_features='auto', max_leaf_nodes=None,
                     max_samples=None, min_impurity_decrease=0.0,
                     min_impurity_split=None, min_samples_leaf=1,
                     min_samples_split=2, min_weight_fraction_leaf=0.0,
                     n_estimators=150, n_jobs=None, oob_score=False,
-                    random_state=None, verbose=0, warm_start=False)",0.9177183373824517
-14,Morumbi,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                    random_state=None, verbose=0, warm_start=False)",0.8731143163038448
+8,Vila_Mariana,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
                       max_depth=None, max_features='auto', max_leaf_nodes=None,
                       max_samples=None, min_impurity_decrease=0.0,
                       min_impurity_split=None, min_samples_leaf=1,
                       min_samples_split=2, min_weight_fraction_leaf=0.0,
                       n_estimators=150, n_jobs=None, oob_score=False,
-                      random_state=None, verbose=0, warm_start=False)",0.8673703535820113
-16,Vila Leopoldina,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                      random_state=None, verbose=0, warm_start=False)",0.8861691884366344
+9,Vila_Nova_Conceição,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
                       max_depth=None, max_features='auto', max_leaf_nodes=None,
                       max_samples=None, min_impurity_decrease=0.0,
                       min_impurity_split=None, min_samples_leaf=1,
                       min_samples_split=2, min_weight_fraction_leaf=0.0,
                       n_estimators=150, n_jobs=None, oob_score=False,
-                      random_state=None, verbose=0, warm_start=False)",0.9562662879585804
-17,Campo Belo,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                      random_state=None, verbose=0, warm_start=False)",0.9708059530735668
+10,Vila_Mascote,DecisionTreeRegressor,"DecisionTreeRegressor(ccp_alpha=0.0, criterion='mse', max_depth=None,
+                      max_features=None, max_leaf_nodes=None,
+                      min_impurity_decrease=0.0, min_impurity_split=None,
+                      min_samples_leaf=1, min_samples_split=2,
+                      min_weight_fraction_leaf=0.0, presort='deprecated',
+                      random_state=None, splitter='best')",0.9362262918107478
+11,Jardim_Marajoara,ExtraTreesRegressor,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
                     max_depth=None, max_features='auto', max_leaf_nodes=None,
                     max_samples=None, min_impurity_decrease=0.0,
                     min_impurity_split=None, min_samples_leaf=1,
                     min_samples_split=2, min_weight_fraction_leaf=0.0,
                     n_estimators=150, n_jobs=None, oob_score=False,
-                    random_state=None, verbose=0, warm_start=False)",0.9091243935337472
-18,Santana,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                    random_state=None, verbose=0, warm_start=False)",0.9426104596142512
+13,Vila_Romana,ExtraTreesRegressor,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                    max_depth=None, max_features='auto', max_leaf_nodes=None,
+                    max_samples=None, min_impurity_decrease=0.0,
+                    min_impurity_split=None, min_samples_leaf=1,
+                    min_samples_split=2, min_weight_fraction_leaf=0.0,
+                    n_estimators=150, n_jobs=None, oob_score=False,
+                    random_state=None, verbose=0, warm_start=False)",0.9606640815931747
+14,Morumbi,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
                       max_depth=None, max_features='auto', max_leaf_nodes=None,
                       max_samples=None, min_impurity_decrease=0.0,
                       min_impurity_split=None, min_samples_leaf=1,
                       min_samples_split=2, min_weight_fraction_leaf=0.0,
                       n_estimators=150, n_jobs=None, oob_score=False,
-                      random_state=None, verbose=0, warm_start=False)",0.9612596296629623
-19,Chácara Santo Antônio,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
+                      random_state=None, verbose=0, warm_start=False)",0.9102255643042803
+16,Vila_Leopoldina,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                      max_depth=None, max_features='auto', max_leaf_nodes=None,
+                      max_samples=None, min_impurity_decrease=0.0,
+                      min_impurity_split=None, min_samples_leaf=1,
+                      min_samples_split=2, min_weight_fraction_leaf=0.0,
+                      n_estimators=150, n_jobs=None, oob_score=False,
+                      random_state=None, verbose=0, warm_start=False)",0.9547721320794624
+17,Campo_Belo,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                      max_depth=None, max_features='auto', max_leaf_nodes=None,
+                      max_samples=None, min_impurity_decrease=0.0,
+                      min_impurity_split=None, min_samples_leaf=1,
+                      min_samples_split=2, min_weight_fraction_leaf=0.0,
+                      n_estimators=150, n_jobs=None, oob_score=False,
+                      random_state=None, verbose=0, warm_start=False)",0.9422847368004662
+18,Santana,RandonForestRegressor,"RandomForestRegressor(bootstrap=True, ccp_alpha=0.0, criterion='mse',
+                      max_depth=None, max_features='auto', max_leaf_nodes=None,
+                      max_samples=None, min_impurity_decrease=0.0,
+                      min_impurity_split=None, min_samples_leaf=1,
+                      min_samples_split=2, min_weight_fraction_leaf=0.0,
+                      n_estimators=150, n_jobs=None, oob_score=False,
+                      random_state=None, verbose=0, warm_start=False)",0.949957102498576
+19,Chácara_Santo_Antônio,ExtraTreesRegressor,"ExtraTreesRegressor(bootstrap=False, ccp_alpha=0.0, criterion='mse',
                     max_depth=None, max_features='auto', max_leaf_nodes=None,
                     max_samples=None, min_impurity_decrease=0.0,
                     min_impurity_split=None, min_samples_leaf=1,
                     min_samples_split=2, min_weight_fraction_leaf=0.0,
                     n_estimators=150, n_jobs=None, oob_score=False,
-                    random_state=None, verbose=0, warm_start=False)",0.8798054815424482
+                    random_state=None, verbose=0, warm_start=False)",0.8394153736850334
