@@ -45,7 +45,7 @@ def main():
          
 
     # Escolher o bairro para o qual o regressor deve fazer as previsões
-    bairro_escolhido = st.selectbox("Bairro",lista_bairros)
+    bairro_escolhido = st.sidebar.selectbox("Bairro",lista_bairros)
     
     
 
