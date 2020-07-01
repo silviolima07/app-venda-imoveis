@@ -109,7 +109,7 @@ def main():
             elif len (status) == 8:
                 st.title("R$ "+status[0:2]+'.'+status[2:5]+'.'+status[5:])
             elif len (status) == 10:
-                st.title("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:7]+'.'+status[7:10)
+                st.title("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:7]+'.'+status[7:10])
 
 
            
