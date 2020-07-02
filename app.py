@@ -51,12 +51,12 @@ def main():
     
 
     #st.markdown("### Selecione as caracteristicas do apartamento")
-    area_total = st.slider('Área Total',min_value=50, max_value=500, value=200, step=10)
-    area_util = st.slider('Área Útil',min_value=50, max_value=500, value=250, step=10)
+    area_total = st.slider('Área Total',min_value=50, max_value=250, value=100, step=10)
+    area_util = st.slider('Área Útil',min_value=30, max_value=200, value=100, step=10)
 
-    quarto = st.radio('Quarto',(1 , 2, 3, 4, 5))
-    banheiro = st.radio('Banheiro',(1,2,3,4,5))
-    vaga = st.radio('Vaga',(1,2,3,4,5,6))
+    quarto = st.radio('Quarto',(1 , 2, 3))
+    banheiro = st.radio('Banheiro',(1,2,3))
+    vaga = st.radio('Vaga',(1,2,3))
 
     #quarto = st.slider('Quarto',min_value=1, max_value=6, value=1, step=1)
     #banheiro = st.slider('Banheiro',min_value=1, max_value=6, value=1, step=1)
