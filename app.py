@@ -15,7 +15,7 @@ def checar_retorno(send_request):
 
 df_bairros = pd.read_csv("modelos_bairros.csv")
 
-lista_bairros = ['Chácara Santo Antônio', 'Vila Mascote','Campo Belo','Jardim Marajoara','Jardim Paulista','Moema','Vila Romana','Perdizes','Vila_Mariana']
+lista_bairros = ['Moema', 'Vila Mascote','Campo Belo','Jardim Marajoara','Jardim Paulista','Chacara Santo Antonio','Vila Romana','Perdizes','Vila Mariana']
 
 
 
