@@ -40,10 +40,11 @@ def main():
 
     if choice == "Home":
         st.markdown("### Previsão de valor de apartamento a venda por bairro")
-        st.markdown("##### Escolha:")
-        st.markdown("##### - bairro e caracteristicas")
+        st.markdown("### Escolha:")
+        st.markdown("#### - bairro e caracteristicas")
+        st.write(" ")
         image1 = Image.open("chaves.png")
-        st.image(image1,caption="",use_column_width=False)
+        st.image(image1,caption="",use_column_width=True)
     
 
     if choice == "Pesquisar":    
@@ -78,11 +79,11 @@ def main():
         #st.sidebar.markdown(" ")
 
         if st.sidebar.button('Enviar consulta'):
-            bar = st.progress(0)
-            for i in range(11):
-                bar.progress(i * 10)
-                # wait
-                time.sleep(0.1)
+            #bar = st.progress(0)
+            #for i in range(11):
+            #    bar.progress(i * 10)
+            #    # wait
+            #    time.sleep(0.1)
 
             if  bairro_escolhido == 'Moema':
                 reg = model_Moema
