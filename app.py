@@ -23,10 +23,6 @@ model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/RandonForestRegressor-Itaim_
 def main():
     """ ExtraTreesRegressor - Imoveis """
     
-    ## Titulo
-    #st.sidebar.title("-> Regressão")
-    
-    #st.markdown("## Streamlit - Titanic")
  
     html_page = """
     <div style="background-color:red;padding=10px">
@@ -45,8 +41,11 @@ def main():
 
 
     if choice == "Home":
-        st.write(" Previsão de valor de apartamento a venda por bairro")
-        st.write(" EScolhe um bairro e as caracteristicas desejadas")
+        st.markdown("### Previsão de valor de apartamento a venda por bairro")
+        st.markdown("##### Escolha:")
+        st.markdown("##### - bairro e caracteristicas")
+        image1 = Image.open("chaves.png")
+        st.sidebar.image(image1,caption="",use_column_width=False)
     
 
     if choice == "Pesquisar":    
@@ -76,9 +75,9 @@ def main():
       
       
         st.sidebar.markdown(" ") 
-        st.sidebar.markdown("#### 1- Selecione as caracteristicas")
-        st.sidebar.markdown("#### 2- Veja o valor previsto do apartamento")
-        st.sidebar.markdown(" ")
+        #st.sidebar.markdown("#### 1- Selecione as caracteristicas")
+        #st.sidebar.markdown("#### 2- Veja o valor previsto do apartamento")
+        #st.sidebar.markdown(" ")
 
         if st.sidebar.button('Enviar consulta'):
             bar = st.progress(0)
@@ -138,8 +137,7 @@ def main():
 
     if choice == 'About':
         st.subheader("I hope you enjoy it")
-        st.markdown("### Built with Streamlit")
-        st.write("Process:")
+        st.markdown("### Process")
         st.write(" - First I did a scrap and gather 20k apartment sale announcements")
         st.write(" - This 20k became only 3k unique lines")
         st.write(" - Dataset had 299 neighborhood, I choosed to use only neighborhood with more than 50 announcements")
