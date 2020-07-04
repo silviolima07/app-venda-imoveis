@@ -87,10 +87,11 @@ def main():
            print("Model Itaim Bibi:", model_Itaim_Bibi)
            
 
-
+         
         result = reg.predict(data)
+        result = int(result)
 
-        print("Result:", int(result))
+        print("Result:", result)
         
         status = str(result)
         status =  status.replace('[','')
@@ -102,9 +103,11 @@ def main():
         st.sidebar.markdown('## Previsão do modelo')
             
         if len(status) == 6:
+            print("6 casas")
             st.subheader("R$ "+status[0:3]+'.'+status[3:])
 
-        if len (status) == 7:  
+        if len (status) == 7:
+            print("7 casas")
             st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
             
         bar = st.progress(0)
