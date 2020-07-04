@@ -26,7 +26,7 @@ def main():
  
     html_page = """
     <div style="background-color:tomato;padding=10px">
-        <p style='text-align:center;font-size:20px;font-weight:bold'>Imóveis</p>
+        <p style='text-align:center;font-size:20px;font-weight:bold';color:white>IMÓVEIS</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)    
@@ -103,11 +103,11 @@ def main():
        
         st.sidebar.markdown('## Previsão do modelo')
         if reg == model_Moema:
-            st.sidebar.write("Score R2: 95%")
+            st.sidebar.markdown("#### Score R2: 95%")
         if reg == model_Itaim_Bibi:
-           st.sidebar.write("Score R2: 87%")
+           st.sidebar.markdown("#### Score R2: 87%")
         if reg == model_Vila_Mariana:
-           st.sidebar.Vila_Mariana("Score R2: 88%")
+           st.sidebar.markdown("#### Score R2: 88%")
             
         if len(status) == 6:
             print("6 casas")
@@ -118,10 +118,10 @@ def main():
             st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
             
         bar = st.progress(0)
-        for i in range(11):
-            bar.progress(i * 10)
-            # wait
-            time.sleep(0.1)
+        #for i in range(11):
+        #    bar.progress(i * 10)
+        #    # wait
+        #    time.sleep(0.1)
 
            
 
