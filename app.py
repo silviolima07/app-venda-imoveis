@@ -40,8 +40,14 @@ def main():
 
     st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
-    activities = ["Pesquisar","About"]
+    activities = ["Home", "Pesquisar","About"]
     choice = st.sidebar.selectbox("Menu",activities)
+
+
+    if choice == "Home":
+        st.write(" Previsão de valor de apartamento a venda por bairro")
+        st.write(" EScolhe um bairro e as caracteristicas desejadas")
+    
 
     if choice == "Pesquisar":    
 
@@ -132,7 +138,7 @@ def main():
 
     if choice == 'About':
         st.subheader("I hope you enjoy it")
-        st.subheader("Built with Streamlit")
+        st.markdown("### Built with Streamlit")
         st.write("Process:")
         st.write(" - First I did a scrap and gather 20k apartment sale announcements")
         st.write(" - This 20k became only 3k unique lines")
