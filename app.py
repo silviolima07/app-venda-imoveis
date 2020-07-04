@@ -130,24 +130,24 @@ def main():
                 # wait
                 time.sleep(0.1)
 
-     if choice == 'About":
-         st.subheader("I hope you enjoy it")
-         st.subheader("Built with Streamlit")
-         st.write("Process:")
-         st.write(" - First I did a scrap and gather 20k apartment sale announcements")
-         st.write(" - This 20k became only 3k unique lines")
-         st.write(" - Dataset had 299 neighborhood, I choosed to use only neighborhood with more than 50 announcements")
-         st.write(" - The first neighborhood in this list was Moema with 161 ")
-         st.write(" - The third was Itaim Bibi with 124 ")
-         st.write(" - The eighth was Vila Mariana with 77 ")
-         st.write(" - The model was built using the data present in each neighborhood")
-         st.subheader("by Silvio Lima")
+    if choice == 'About":
+        st.subheader("I hope you enjoy it")
+        st.subheader("Built with Streamlit")
+        st.write("Process:")
+        st.write(" - First I did a scrap and gather 20k apartment sale announcements")
+        st.write(" - This 20k became only 3k unique lines")
+        st.write(" - Dataset had 299 neighborhood, I choosed to use only neighborhood with more than 50 announcements")
+        st.write(" - The first neighborhood in this list was Moema with 161 ")
+        st.write(" - The third was Itaim Bibi with 124 ")
+        st.write(" - The eighth was Vila Mariana with 77 ")
+        st.write(" - The model was built using the data present in each neighborhood")
+        st.subheader("by Silvio Lima")
         
-         if st.button("Linkedin"):
-             js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
-             html = '<img src onerror="{}">'.format(js)
-             div = Div(text=html)
-             st.bokeh_chart(div)      
+        if st.button("Linkedin"):
+            js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
+            html = '<img src onerror="{}">'.format(js)
+            div = Div(text=html)
+            st.bokeh_chart(div)      
 
 
 
