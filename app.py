@@ -1,21 +1,13 @@
 import streamlit as st
-import requests
-import ujson as json
+
 from PIL import Image
 import time
 import pandas as pd
 import  numpy as np
-
-def checar_retorno(send_request):
-  data = send_request.json()
-  temp = str(data).split()[2]
-  status = temp.replace('}}', '')
-  return status
+import pickle
 
 
-df_bairros = pd.read_csv("modelos_bairros.csv")
-
-lista_bairros = ['Moema', 'Vila Mascote','Campo Belo','Jardim Marajoara','Jardim Paulista','Chacara Santo Antonio','Vila Romana','Perdizes','Vila Mariana']
+lista_bairros = ['Moema', 'Vila Mariana', 'Itaim Bib']
 
 
 
@@ -37,10 +29,6 @@ def main():
     image = Image.open("vende-se3.png")
     st.sidebar.image(image,caption="",use_column_width=True)
 
-    #st.sidebar.markdown("#### --> Streamlit") 
-    #st.sidebar.markdown("#### > ExtraTreesRegressor (api Heroku)")
-    #st.sidebar.markdown("#### --> Modelo alocado no Heroku")
-
     st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
          
@@ -58,28 +46,18 @@ def main():
     banheiro = st.radio('Banheiro',(1,2,3))
     vaga = st.radio('Vaga',(1,2,3))
 
-    #quarto = st.slider('Quarto',min_value=1, max_value=6, value=1, step=1)
-    #banheiro = st.slider('Banheiro',min_value=1, max_value=6, value=1, step=1)
-    #vaga = st.slider('Vaga', min_value=1, max_value=5, value=1, step=1)
-    #st.markdown("#### Caracteristicas selecionadas do passageiro")
-    #st.write('Caracteristicas: '+ classe,'---', sexo, '---',embarque,'---',idade,"anos",'---','$$',passagem)
+    model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
-    #cloud = Image.open("cloud.png")
-    #st.image(cloud,caption="",use_column_width=True)
-    
-    #data = [{'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}]
+    model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
+
+    model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/KNeighborRegressor-Itaim_Bibi.sav','rb'))
         
     
     # Choosen data
-    data = {'bairro': bairro_escolhido, 'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
-    
-    # Formato json 
-    data = json.dumps(data)
+    data = {'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
 
     print(data)
       
-    # url da api no heroku 
-    url = 'https://app-api-001.herokuapp.com/'
       
     st.sidebar.markdown(" ") 
     st.sidebar.markdown("#### 1- Selecione as caracteristicas")
@@ -93,32 +71,42 @@ def main():
             # wait
             time.sleep(0.1)
 
-        send_request = requests.post(url, data)
-        #st.text("Acessando a api no heroku...")
-        if not send_request.ok:
-            st.warning("Houston we have a problem.")
+        if  bairro_escolhido == 'Moema':
+            reg = model_Moema
+            print("Model Moema:", model_Moema)
+
+        if bairro_escolhido == "Vila Mariana":
+           reg = model_Vila_Mariana
+           print("Model Vila Mariana:", model_Vila_Mariana)
+
+        if bairro_escolhido == "Itaim Bibi":
+           reg = model_Itaim_Bibi
+           print("Model Itaim Bibi:", model_Itaim_Bibi)
+           
+
+
+        result = reg.predict(data)
+
+        print("Result:", result)
+        
+        status = str(result)
        
-        elif send_request.ok:
-            st.sidebar.markdown('## Previsão do modelo')
-            status = checar_retorno(send_request)
-            print("Valor recebido do modelo:", status)
-            print("Tipo:", type(status))
+        st.sidebar.markdown('## Previsão do modelo')
             
-            #st.sidebar.markdown(" ")
-            if len(status) == 6:
-                st.subheader("R$ "+status[0:3]+'.'+status[3:])
-            elif len (status) == 7:  
-                st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
-            elif len (status) == 8:
-                st.subheader("R$ "+status[0:2]+'.'+status[2:5]+'.'+status[5:])
-            elif len (status) == 10:
-                st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:7]+'.'+status[7:10])
+        if len(status) == 6:
+            st.subheader("R$ "+status[0:3]+'.'+status[3:])
+        elif len (status) == 7:  
+            st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
+        elif len (status) == 8:
+            st.subheader("R$ "+status[0:2]+'.'+status[2:5]+'.'+status[5:])
+        elif len (status) == 10:
+            st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:7]+'.'+status[7:10])
             
-            bar = st.progress(0)
-            for i in range(11):
-                bar.progress(i * 10)
-                # wait
-                time.sleep(0.1)
+        bar = st.progress(0)
+        for i in range(11):
+            bar.progress(i * 10)
+            # wait
+            time.sleep(0.1)
 
            
 
