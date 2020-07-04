@@ -9,8 +9,6 @@ import pickle
 from bokeh.models.widgets import Div
 
 
-
-
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
 model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
