@@ -43,7 +43,7 @@ def main():
         st.markdown("### Escolha:")
         st.markdown("#### - bairro e caracteristicas")
         st.write(" ")
-        image1 = Image.open("chaves.jpeg")
+        image1 = Image.open("chaves.png")
         st.image(image1,caption="",use_column_width=True)
     
 
