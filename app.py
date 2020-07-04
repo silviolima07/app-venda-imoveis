@@ -41,10 +41,10 @@ def main():
     if choice == "Home":
         st.markdown("### Previsão de valor de apartamento a venda por bairro")
         st.markdown("### Escolha:")
-        st.markdown("#### - bairro e caracteristicas")
+        st.markdown("### - bairro e caracteristicas")
         st.write(" ")
         image1 = Image.open("chaves.png")
-        st.image(image1,caption="",use_column_width=True)
+        st.image(image1,caption="",use_column_width=False)
     
 
     if choice == "Pesquisar":    
