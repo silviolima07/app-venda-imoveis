@@ -130,7 +130,7 @@ def main():
                 # wait
                 time.sleep(0.1)
 
-    if choice == 'About":
+    if choice == 'About':
         st.subheader("I hope you enjoy it")
         st.subheader("Built with Streamlit")
         st.write("Process:")
