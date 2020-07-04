@@ -9,6 +9,7 @@ verify_ssl = true
 streamlit = "*"
 ujson = "*"
 sklearn = "*"
+bokeh = "*"
 
 [requires]
 python_version = "3.6"
