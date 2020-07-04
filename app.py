@@ -7,9 +7,9 @@ import  numpy as np
 import pickle
 
 
-lista_bairros = ['Moema', 'Vila Mariana', 'Itaim Bibi']
+lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
-model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
+model_Moema = pickle.load(open('Modelo_Bairros/RandonForestRegressor-Moema.sav','rb'))
 
 model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
 
