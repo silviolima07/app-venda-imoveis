@@ -9,11 +9,11 @@ import pickle
 
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
-model_Moema = pickle.load(open('Modelo_Bairros/RandonForestRegressor-Moema.sav','rb'))
+model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
 model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
 
-model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/KNeighborRegressor-Itaim_Bibi.sav','rb'))
+model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/RandonForestRegressor-Itaim_Bibi.sav','rb'))
 
 
 def main():
@@ -24,12 +24,12 @@ def main():
     
     #st.markdown("## Streamlit - Titanic")
  
-    #html_page = """
-    #<div style="background-color:tomato;padding=10px">
-    #    <p style='text-align:center;font-size:20px;font-weight:bold'>Streamlit - Titanic</p>
-    #</div>
-    #          """
-    #st.markdown(html_page, unsafe_allow_html=True)    
+    html_page = """
+    <div style="background-color:tomato;padding=10px">
+        <p style='text-align:center;font-size:20px;font-weight:bold'>Imóveis</p>
+    </div>
+              """
+    st.markdown(html_page, unsafe_allow_html=True)    
 
     image = Image.open("vende-se3.png")
     st.sidebar.image(image,caption="",use_column_width=True)
@@ -89,6 +89,7 @@ def main():
 
          
         result = reg.predict(data)
+        result = np.expm1(result)
         result = int(result)
 
         print("Result:", result)
@@ -101,6 +102,12 @@ def main():
         print("Numero de casas:", len(status))
        
         st.sidebar.markdown('## Previsão do modelo')
+        if reg == model_Moema:
+            st.sidebar.write("Score R2: 95%")
+        if reg == model_Itaim_Bibi:
+           st.sidebar.write("Score R2: 87%")
+        if reg == model_Vila_Mariana:
+           st.sidebar.Vila_Mariana("Score R2: 88%")
             
         if len(status) == 6:
             print("6 casas")
