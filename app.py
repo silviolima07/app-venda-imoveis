@@ -93,6 +93,9 @@ def main():
         print("Result:", result)
         
         status = str(result)
+        status =  status.replace('[','']
+        status =  status.replace(']','']
+        status =  status.replace('.','']
        
         st.sidebar.markdown('## Previsão do modelo')
             
