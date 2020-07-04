@@ -90,7 +90,7 @@ def main():
 
         result = reg.predict(data)
 
-        print("Result:", result)
+        print("Result:", int(result))
         
         status = str(result)
         status =  status.replace('[','')
