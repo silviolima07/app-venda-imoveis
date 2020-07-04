@@ -9,6 +9,11 @@ import pickle
 
 lista_bairros = ['Moema', 'Vila Mariana', 'Itaim Bib']
 
+model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
+
+model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
+
+model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/KNeighborRegressor-Itaim_Bibi.sav','rb'))
 
 
 def main():
@@ -46,11 +51,7 @@ def main():
     banheiro = st.radio('Banheiro',(1,2,3))
     vaga = st.radio('Vaga',(1,2,3))
 
-    model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
-
-    model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
-
-    model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/KNeighborRegressor-Itaim_Bibi.sav','rb'))
+    
         
     
     # Choosen data
