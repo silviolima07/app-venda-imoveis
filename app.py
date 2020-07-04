@@ -7,7 +7,7 @@ import  numpy as np
 import pickle
 
 
-lista_bairros = ['Moema', 'Vila Mariana', 'Itaim Bib']
+lista_bairros = ['Moema', 'Vila Mariana', 'Itaim Bibi']
 
 model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
@@ -93,9 +93,9 @@ def main():
         print("Result:", result)
         
         status = str(result)
-        status =  status.replace('[','']
-        status =  status.replace(']','']
-        status =  status.replace('.','']
+        status =  status.replace('[',''])
+        status =  status.replace(']',''])
+        status =  status.replace('.',''])
        
         st.sidebar.markdown('## Previsão do modelo')
             
