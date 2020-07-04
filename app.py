@@ -59,7 +59,7 @@ def main():
 
     print(data)
 
-    data = [area_total, area_util, quarto, banheiro, vaga]
+    data = np.array([area_total, area_util, quarto, banheiro, vaga]).reshape(1,5)
       
       
     st.sidebar.markdown(" ") 
