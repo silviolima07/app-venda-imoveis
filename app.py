@@ -58,6 +58,8 @@ def main():
     data = {'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
 
     print(data)
+
+    data = [area_total, area_util, quarto, banheiro, vaga]
       
       
     st.sidebar.markdown(" ") 
