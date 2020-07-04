@@ -25,8 +25,8 @@ def main():
     #st.markdown("## Streamlit - Titanic")
  
     html_page = """
-    <div style="background-color:tomato;padding=10px">
-        <p style='text-align:center;font-size:20px;font-weight:bold';color:white>IMÓVEIS</p>
+    <div style="background-color:red;padding=10px">
+        <p style='text-align:center;font-size:20px;font-weight:bold'>IMÓVEIS</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)    
@@ -118,10 +118,10 @@ def main():
             st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
             
         bar = st.progress(0)
-        #for i in range(11):
-        #    bar.progress(i * 10)
-        #    # wait
-        #    time.sleep(0.1)
+        for i in range(11):
+            bar.progress(i * 10)
+            # wait
+            time.sleep(0.1)
 
            
 
