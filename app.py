@@ -130,7 +130,7 @@ def main():
             
             bar = st.progress(0)
             for i in range(11):
-                bar.sidebar.progress(i * 10)
+                bar.progress(i * 10)
                 # wait
                 time.sleep(0.1)
 
