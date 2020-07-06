@@ -43,7 +43,7 @@ def main():
         st.markdown("### Escolha:")
         st.markdown("### - bairro e caracteristicas")
         st.write(" ")
-        image1 = Image.open("chaves.png")
+        image1 = Image.open("chaves3.png")
         st.image(image1,caption="",use_column_width=False)
     
 
@@ -136,9 +136,9 @@ def main():
 
     if choice == 'About':
         st.markdown("### Process")
-        st.write(" - First I did a scrap and gather 20k apartment sale announcements")
-        st.write(" - This 20k became only 3k unique lines")
-        st.write(" - Dataset had 299 neighborhood, only neighborhood with more than 50 announcements was used")
+        st.write(" - First I did a scrap in 2k pages and gather 4k apartment sale announcements")
+        st.write(" - It became only 3k unique lines")
+        st.write(" - Dataset had 299 neighborhoods, only neighborhoods with more than 50 announcements was used")
         st.write(" - The first neighborhood in this list was Moema with 161 ")
         st.write(" - The third was Itaim Bibi with 124 and the eighth was Vila Mariana with 77 ")
         st.write(" - The model was built using the data present in each neighborhood")
