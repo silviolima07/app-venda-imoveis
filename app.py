@@ -114,11 +114,11 @@ def main():
        
             st.sidebar.markdown('## Previsão do modelo')
             if reg == model_Moema:
-                st.sidebar.markdown("#### Score R2: 95%")
+                st.sidebar.markdown("### Score R2: 95%")
             if reg == model_Itaim_Bibi:
-                st.sidebar.markdown("#### Score R2: 87%")
+                st.sidebar.markdown("### Score R2: 87%")
             if reg == model_Vila_Mariana:
-               st.sidebar.markdown("#### Score R2: 88%")
+               st.sidebar.markdown("### Score R2: 88%")
             
             if len(status) == 6:
                 print("6 casas")
@@ -130,7 +130,7 @@ def main():
             
             bar = st.progress(0)
             for i in range(11):
-                bar.progress(i * 10)
+                bar.sidebar.progress(i * 10)
                 # wait
                 time.sleep(0.1)
 
