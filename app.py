@@ -24,12 +24,12 @@ def main():
  
     html_page = """
     <div style="background-color:red;padding=10px">
-        <p style='text-align:center;font-size:20px;font-weight:bold'>IMÓVEIS</p>
+        <p style='color:white;text-align:center;font-size:20px;font-weight:bold'>IMÓVEIS</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)    
 
-    image = Image.open("vende-se3.png")
+    image = Image.open("vende-se.png")
     st.sidebar.image(image,caption="",use_column_width=True)
 
     st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
@@ -43,7 +43,7 @@ def main():
         st.markdown("### Escolha:")
         st.markdown("### - bairro e caracteristicas")
         st.write(" ")
-        image1 = Image.open("chaves-3.png")
+        image1 = Image.open("chaves3.png")
         st.image(image1,caption="",use_column_width=False)
     
 
