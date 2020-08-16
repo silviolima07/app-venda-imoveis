@@ -66,9 +66,9 @@ def main():
         
     
         # Choosen data
-        data = {'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
+        #data = {'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
 
-        print(data)
+        #print(data)
 
         data = np.array([area_total, area_util, quarto, banheiro, vaga]).reshape(1,5)
       
@@ -105,10 +105,10 @@ def main():
 
             print("Result:", result)
         
-            status = str(result)
-            status =  status.replace('[','')
-            status =  status.replace(']','')
-            status =  status.replace('.','')
+            pred = str(result)
+            pred =  pred.replace('[','')
+            pred =  pred.replace(']','')
+            pred =  pred.replace('.','')
 
             print("Numero de casas:", len(status))
        
