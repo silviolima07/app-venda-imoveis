@@ -6,7 +6,7 @@ import pandas as pd
 import  numpy as np
 import pickle
 # Html link
-from bokeh.models.widgets import Div
+#from bokeh.models.widgets import Div
 
 
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
@@ -143,13 +143,13 @@ def main():
         st.write(" - The third was Itaim Bibi with 124 and the eighth was Vila Mariana with 77 ")
         st.write(" - The model was built using the data present in each neighborhood")
         st.subheader("by Silvio Lima")
-        
+        """
         if st.button("Linkedin"):
             js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
             html = '<img src onerror="{}">'.format(js)
             div = Div(text=html)
             st.bokeh_chart(div)      
-
+        """
 
 
 if __name__ == '__main__':
