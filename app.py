@@ -13,7 +13,7 @@ import pickle
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
 
-model_Moema = joblib.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
+model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
 
 model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
