@@ -14,6 +14,8 @@ lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
 model_Moema = joblib.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
+"""
+
 model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
 
 model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/RandonForestRegressor-Itaim_Bibi.sav','rb'))
@@ -152,6 +154,7 @@ def main():
             st.bokeh_chart(div)      
         """
 
+"""
 
 if __name__ == '__main__':
     main()
