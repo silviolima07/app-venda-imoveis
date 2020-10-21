@@ -148,7 +148,7 @@ def main():
         st.write(" - The third was Itaim Bibi with 124 and the eighth was Vila Mariana with 77 ")
         st.write(" - The model was built using the data present in each neighborhood")
         st.subheader("by Silvio Lima")
-        """
+        
         if st.button("Linkedin"):
             js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
             html = '<img src onerror="{}">'.format(js)
