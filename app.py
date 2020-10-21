@@ -9,10 +9,10 @@ import joblib
 # Html link
 #from bokeh.models.widgets import Div
 
+"""
 
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
-"""
 
 model_Moema = joblib.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
