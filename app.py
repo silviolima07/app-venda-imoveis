@@ -5,13 +5,14 @@ import time
 import pandas as pd
 import  numpy as np
 import pickle
+import joblib
 # Html link
 #from bokeh.models.widgets import Div
 
 
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
-model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
+model_Moema = joblib.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
 model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
 
