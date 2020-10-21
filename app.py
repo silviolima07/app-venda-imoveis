@@ -9,7 +9,6 @@ import joblib
 # Html link
 #from bokeh.models.widgets import Div
 
-"""
 
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
@@ -18,6 +17,8 @@ model_Moema = joblib.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','r
 
 
 model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
+
+"""
 
 model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/RandonForestRegressor-Itaim_Bibi.sav','rb'))
 
