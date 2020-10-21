@@ -93,6 +93,7 @@ preshed = "==3.0.2"
 prometheus-client = "==0.7.1"
 prompt-toolkit = "==3.0.3"
 protobuf = "==3.11.3"
+pickle = "*"
 
 [requires]
 python_version = "3.6"
