@@ -22,6 +22,11 @@ def main():
     image = Image.open("vende-se.png")
     st.sidebar.image(image,caption="",use_column_width=True)
 
+    lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
+
+
+    model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
+
     
 
 if __name__ == '__main__':
