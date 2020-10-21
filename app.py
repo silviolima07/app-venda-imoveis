@@ -18,7 +18,7 @@ model_Moema = joblib.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','r
 
 model_Vila_Mariana = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
 
-"""
+
 
 model_Itaim_Bibi = pickle.load(open('Modelo_Bairros/RandonForestRegressor-Itaim_Bibi.sav','rb'))
 
@@ -41,7 +41,7 @@ def main():
 
     activities = ["Home", "Pesquisar","About"]
     choice = st.sidebar.selectbox("Menu",activities)
-
+"""
 
     if choice == "Home":
         st.markdown("### Previsão de valor de apartamento a venda por bairro")
