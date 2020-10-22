@@ -60,7 +60,6 @@ def main():
 
     activities = ["Home", "Pesquisar","About"]
     choice = st.sidebar.selectbox("Menu",activities)
-"""
 
     if choice == "Home":
         st.markdown("### Previsão de valor de apartamento a venda por bairro")
