@@ -130,11 +130,11 @@ def main():
             
             if len(pred) == 6:
                 print("6 casas")
-                st.subheader("R$ "+status[0:3]+'.'+status[3:])
+                st.subheader("R$ "+pred[0:3]+'.'+pred[3:])
 
             if len (pred) == 7:
                 print("7 casas")
-                st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
+                st.subheader("R$ "+pred[0]+'.'+pred[1:4]+'.'+pred[4:])
             
             bar = st.progress(0)
             for i in range(11):
