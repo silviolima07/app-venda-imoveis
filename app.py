@@ -118,7 +118,7 @@ def main():
             pred =  pred.replace(']','')
             pred =  pred.replace('.','')
 
-            print("Numero de casas:", len(status))
+            print("Numero de casas:", len(pred))
        
             st.sidebar.markdown('## Previsão do modelo')
             if reg == model_Moema:
@@ -128,11 +128,11 @@ def main():
             if reg == model_Vila_Mariana:
                st.sidebar.markdown("### Score R2: 88%")
             
-            if len(status) == 6:
+            if len(pred) == 6:
                 print("6 casas")
                 st.subheader("R$ "+status[0:3]+'.'+status[3:])
 
-            if len (status) == 7:
+            if len (pred) == 7:
                 print("7 casas")
                 st.subheader("R$ "+status[0]+'.'+status[1:4]+'.'+status[4:])
             
