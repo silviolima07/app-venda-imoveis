@@ -9,6 +9,13 @@ import joblib
 
 
 
+@st.cache(allow_output_mutation=True)
+def load(model_path):
+    model = joblib.load(model_path)
+    return model
+
+
+
 def main():
     """ ExtraTreesRegressor - Imoveis """
     
@@ -26,7 +33,7 @@ def main():
     lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
 
-    #model_Moema = pickle.load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
+    model_Moema = load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
 
     
 
