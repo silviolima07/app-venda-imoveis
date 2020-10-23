@@ -33,7 +33,7 @@ def main():
  
     html_page = """
     <div style="background-color:blue;padding=10px">
-        <p style='color:white;text-align:center;font-size:20px;font-weight:bold'>APARTMENT</p>
+        <p style='color:white;text-align:center;font-size:20px;font-weight:bold'>Predicting the Sale Price of Apartments by Neighborhood</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)    
@@ -47,11 +47,11 @@ def main():
     choice = st.sidebar.selectbox("Menu",activities)
 
     if choice == "Home":
-        st.markdown("### Predicting the Sale Price of Apartments by Neighborhood")
+        #st.markdown("### Predicting the Sale Price of Apartments by Neighborhood")
         st.markdown("### Choice:")
         st.markdown("### - neighborhood and  characteristics")
         st.write(" ")
-        image1 = Image.open("chaves_blue_3.png")
+        image1 = Image.open("chaves3.png")
         st.image(image1,caption="",use_column_width=False)
     
 
