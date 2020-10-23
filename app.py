@@ -33,7 +33,7 @@ def main():
  
     html_page = """
     <div style="background-color:blue;padding=10px">
-        <p style='color:white;text-align:center;font-size:20px;font-weight:bold'>Predicting the Sale Price of Apartments by Neighborhood</p>
+        <p style='color:white;text-align:center;font-size:40px;font-weight:bold'>Predicting the Sale Price of Apartments by Neighborhood</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)    
