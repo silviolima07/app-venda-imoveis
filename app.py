@@ -32,7 +32,7 @@ def main():
     
  
     html_page = """
-    <div style="background-color:red;padding=10px">
+    <div style="background-color:blue;padding=10px">
         <p style='color:white;text-align:center;font-size:20px;font-weight:bold'>APARTMENT</p>
     </div>
               """
@@ -120,7 +120,7 @@ def main():
 
             print("Numero de casas:", len(pred))
        
-            st.sidebar.markdown('## Previsão do modelo')
+            st.sidebar.markdown('## Forecast')
             if reg == model_Moema:
                 st.sidebar.markdown("### Score R2: 95%")
             if reg == model_Itaim_Bibi:
