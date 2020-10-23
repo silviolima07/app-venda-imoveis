@@ -33,42 +33,42 @@ def main():
  
     html_page = """
     <div style="background-color:red;padding=10px">
-        <p style='color:white;text-align:center;font-size:20px;font-weight:bold'>IMÓVEIS</p>
+        <p style='color:white;text-align:center;font-size:20px;font-weight:bold'>APARTMENT</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)    
 
-    image = Image.open("vende-se.png")
+    image = Image.open("for-sale.png")
     st.sidebar.image(image,caption="",use_column_width=True)
 
     st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
 
-    activities = ["Home", "Pesquisar","About"]
+    activities = ["Home", "Search","About"]
     choice = st.sidebar.selectbox("Menu",activities)
 
     if choice == "Home":
-        st.markdown("### Previsão de valor de apartamento a venda por bairro")
-        st.markdown("### Escolha:")
-        st.markdown("### - bairro e caracteristicas")
+        st.markdown("### Predicting the Sale Price of Apartments by Neighborhood")
+        st.markdown("### Choice:")
+        st.markdown("### - neighborhood and  characteristics")
         st.write(" ")
-        image1 = Image.open("chaves3.png")
+        image1 = Image.open("chaves_blue_3.png")
         st.image(image1,caption="",use_column_width=False)
     
 
-    if choice == "Pesquisar":    
+    if choice == "Search":    
 
         # Escolher o bairro para o qual o regressor deve fazer as previsões
-        bairro_escolhido = st.sidebar.selectbox("Bairro",lista_bairros)
+        bairro_escolhido = st.sidebar.selectbox("Neighborhood",lista_bairros)
     
     
 
         #st.markdown("### Selecione as caracteristicas do apartamento")
-        area_total = st.slider('Área Total',min_value=50, max_value=250, value=100, step=10)
-        area_util = st.slider('Área Útil',min_value=30, max_value=200, value=100, step=10)
+        area_total = st.slider('Total Area',min_value=50, max_value=250, value=100, step=10)
+        area_util = st.slider('Useful Area',min_value=30, max_value=200, value=100, step=10)
 
-        quarto = st.radio('Quarto',(1 , 2, 3))
-        banheiro = st.radio('Banheiro',(1,2,3))
-        vaga = st.radio('Vaga',(1,2,3))
+        quarto = st.radio('Bedroom',(1 , 2, 3))
+        banheiro = st.radio('Bathroom',(1,2,3))
+        vaga = st.radio('Parking spaces',(1,2,3))
 
     
         
@@ -86,7 +86,7 @@ def main():
         #st.sidebar.markdown("#### 2- Veja o valor previsto do apartamento")
         #st.sidebar.markdown(" ")
 
-        if st.sidebar.button('Enviar consulta'):
+        if st.sidebar.button('Submit'):
             #bar = st.progress(0)
             #for i in range(11):
             #    bar.progress(i * 10)
@@ -144,7 +144,7 @@ def main():
 
     if choice == 'About':
         st.markdown("### Process:")
-        st.write(" - First I did a scrap in 2k pages and gather 4k apartment sale announcements")
+        st.write(" - First I did a scrap in 2k pages and gather 4k apartment sale announcements in São Paulo, Brazil")
         st.write(" - It became only 3k unique lines")
         st.write(" - Dataset had 299 neighborhoods, only neighborhoods with more than 50 announcements was used")
         st.write(" - The first neighborhood in this list was Moema with 161 ")
