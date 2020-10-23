@@ -144,12 +144,12 @@ def main():
 
     if choice == 'About':
         st.markdown("### Process:")
-        st.write(" - First I did a scrap in 2k pages and gather 4k apartment sale announcements in São Paulo, Brazil")
+        st.write(" - First I did a scrap in 2k pages and gathered 4k apartment sale announcements in São Paulo, Brazil")
         st.write(" - It became only 3k unique lines")
         st.write(" - Dataset had 299 neighborhoods, only neighborhoods with more than 50 announcements was used")
         st.write(" - The first neighborhood in this list was Moema with 161 ")
         st.write(" - The third was Itaim Bibi with 124 and the eighth was Vila Mariana with 77 ")
-        st.write(" - The model was built using the data present in each neighborhood")
+        #st.write(" - The model was built using the data present in each neighborhood")
         st.markdown("### Supported by Streamlit from github")
         st.subheader("by Silvio Lima")
         
