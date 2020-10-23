@@ -47,8 +47,7 @@ def main():
     choice = st.sidebar.selectbox("Menu",activities)
 
     if choice == "Home":
-        #st.markdown("### Predicting the Sale Price of Apartments by Neighborhood")
-        st.markdown("### Choice:")
+        st.markdown("### Choose:")
         st.markdown("### - neighborhood and  characteristics")
         st.write(" ")
         image1 = Image.open("chaves3.png")
