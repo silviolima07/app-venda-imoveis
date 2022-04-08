@@ -53,7 +53,7 @@ def main():
         image1 = Image.open("chaves3.png")
         st.image(image1,caption="",use_column_width=False)
     
-"""
+
     if choice == "Search":    
 
         # Escolher o bairro para o qual o regressor deve fazer as previsões
@@ -140,7 +140,7 @@ def main():
                 bar.progress(i * 10)
                 # wait
                 time.sleep(0.1)
-"""
+
     if choice == 'About':
         st.markdown("### Process:")
         st.write(" - First I did a scrap in 2k pages and gathered 4k apartment sale announcements in São Paulo, Brazil")
