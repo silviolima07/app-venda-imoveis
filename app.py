@@ -94,15 +94,15 @@ def main():
 
             if  bairro_escolhido == 'Moema':
                 reg = model_Moema
-                print("Model Moema:", model_Moema)
+                #print("Model Moema:", model_Moema)
 
             if bairro_escolhido == "Vila Mariana":
                reg = model_Vila_Mariana
-               print("Model Vila Mariana:", model_Vila_Mariana)
+               #print("Model Vila Mariana:", model_Vila_Mariana)
 
             if bairro_escolhido == "Itaim Bibi":
                reg = model_Itaim_Bibi
-               print("Model Itaim Bibi:", model_Itaim_Bibi)
+               #print("Model Itaim Bibi:", model_Itaim_Bibi)
            
 
          
@@ -110,7 +110,7 @@ def main():
             result = np.expm1(result)
             result = int(result)
 
-            print("Result:", result)
+            #print("Result:", result)
         
             pred = str(result)
             pred =  pred.replace('[','')
@@ -128,11 +128,11 @@ def main():
                st.sidebar.markdown("### Score R2: 88%")
             
             if len(pred) == 6:
-                print("6 casas")
+                #print("6 casas")
                 st.subheader("R$ "+pred[0:3]+'.'+pred[3:])
 
             if len (pred) == 7:
-                print("7 casas")
+                #print("7 casas")
                 st.subheader("R$ "+pred[0]+'.'+pred[1:4]+'.'+pred[4:])
             
             bar = st.progress(0)
