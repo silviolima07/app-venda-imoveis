@@ -151,12 +151,12 @@ def main():
         #st.write(" - The model was built using the data present in each neighborhood")
         st.markdown("### Supported by Streamlit from github")
         st.subheader("by Silvio Lima")
-        
-        if st.button("Linkedin"):
-            js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
-            html = '<img src onerror="{}">'.format(js)
-            div = Div(text=html)
-            st.bokeh_chart(div)      
+        st.write('https://www.linkedin.com/in/silviocesarlima/')
+        #if st.button("Linkedin"):
+        #    js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
+        #    html = '<img src onerror="{}">'.format(js)
+        #    div = Div(text=html)
+        #    st.bokeh_chart(div)      
        
 
     
