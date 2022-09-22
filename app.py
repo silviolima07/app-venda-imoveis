@@ -33,15 +33,23 @@ def main():
  
     html_page = """
     <div style="background-color:blue;padding=10px">
-        <p style='color:white;text-align:center;font-size:25px;font-family:'Times New Roman'>Predicting the Sale Price of Apartments by Neighborhood</p>
+        <p style='color:white;text-align:center;font-size:28px;font-family:'Times New Roman'>Predicting the Sale Price of Apartments by Neighborhood</p>
     </div>
               """
-    st.markdown(html_page, unsafe_allow_html=True)    
+    st.markdown(html_page, unsafe_allow_html=True)   
 
     image = Image.open("for-sale.png")
     st.sidebar.image(image,caption="",use_column_width=True)
 
-    st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+    #st.write('<style>div.Widget.row-widget.stRadio > div{flex-direction:row;}</style>', unsafe_allow_html=True)
+
+    st.write('<style>div.row-widget.stRadio > div{flex-direction:row;justify-content: center}</style>', unsafe_allow_html=True)
+
+    #st.write('<style>div.row-widget.stRadio > div{flex-direction:row;justify-content: center;} </style>', unsafe_allow_html=True)
+
+    #st.write('<style>div.st-bf{flex-direction:column;} div.st-ag{font-weight:bold;padding-left:2px;}</style>', unsafe_allow_html=True)
+
+    
 
     activities = ["Home", "Search","About"]
     choice = st.sidebar.selectbox("Menu",activities)
@@ -51,7 +59,7 @@ def main():
         st.markdown("### - neighborhood and  characteristics")
         st.write(" ")
         image1 = Image.open("chaves3.png")
-        st.image(image1,caption="",use_column_width=False)
+        st.image(image1,caption="",use_column_width=True)
     
 
     if choice == "Search":    
@@ -64,18 +72,16 @@ def main():
         #st.markdown("### Selecione as caracteristicas do apartamento")
         area_total = st.slider('Total Area',min_value=50, max_value=250, value=100, step=10)
         area_util = st.slider('Useful Area',min_value=30, max_value=200, value=100, step=10)
-
+        st.write(" ")
         quarto = st.radio('Bedroom',(1 , 2, 3))
         banheiro = st.radio('Bathroom',(1,2,3))
         vaga = st.radio('Parking spaces',(1,2,3))
-
-    
         
     
         # Choosen data
-        #data = {'area_total_clean': area_total, 'area_util_clean': area_util, 'quarto_clean':quarto, 'banheiro_clean': banheiro, 'vaga_clean': vaga}
-
-        #print(data)
+        data = {'Total area': area_total, 'Usef area': area_util, 'Bedroom':quarto, 'Bathroom': banheiro, 'Parking spaces': vaga}
+        st.markdown("### Characteristics")
+        st.write(data)
 
         data = np.array([area_total, area_util, quarto, banheiro, vaga]).reshape(1,5)
       
@@ -117,7 +123,7 @@ def main():
             pred =  pred.replace(']','')
             pred =  pred.replace('.','')
 
-            print("Numero de casas:", len(pred))
+            #print("Numero de casas:", len(pred))
        
             st.sidebar.markdown('## Forecast')
             if reg == model_Moema:
