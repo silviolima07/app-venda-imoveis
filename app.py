@@ -1,29 +1,57 @@
 import streamlit as st
-
+#import sklearn
 from PIL import Image
 import time
 import pandas as pd
 import  numpy as np
+
 import pickle
-import joblib
+import joblib 
+
+import warnings
+warnings.filterwarnings('ignore')
+
 # Html link
 from bokeh.models.widgets import Div
 
 
 
-@st.cache(allow_output_mutation=True)
+#@st.cache(allow_output_mutation=True)
 def load(model_path):
-    model = joblib.load(model_path)
-    return model
-
+    with open(model_path, 'rb') as pickle_file:
+      content =   joblib.load(pickle_file)
+    #print('load ok')
+    return content
 
 lista_bairros = ['Moema','Itaim Bibi', 'Vila Mariana']
 
-model_Moema = load(open('Modelo_Bairros/ExtraTreesRegressor-Moema.sav','rb'))
+#file_path = './Modelo_Bairros/ExtraTreesRegressor-Moema.sav'
+#with open(file_path , 'rb') as f:
+#    model.Vila_Mariana = pickle.load(f)
 
-model_Vila_Mariana = load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
+#from sklearn.exceptions import InconsistentVersionWarning
+#warnings.simplefilter("error", InconsistentVersionWarning)
 
-model_Itaim_Bibi = load(open('Modelo_Bairros/RandonForestRegressor-Itaim_Bibi.sav','rb'))
+#try:
+   #est = pickle.loads(file_path)
+#   with open(file_path , 'rb
+   
+#   ') as f:
+#    model.Vila_Mariana = pickle.load(f)
+    #model_Vila_Mariana = load(open('Modelo_Bairros/ExtraTreesRegressor-Vila_Mariana.sav','rb'))
+
+#except InconsistentVersionWarning as w:
+#   print(w.original_sklearn_version)
+
+#with open(file_path, 'rb') as pickle_file:
+#    content = pickle.load(pickle_file)
+
+
+model_Moema = load('./Modelo_Bairros/RandomForestRegressor-Moema.joblib')
+
+model_Vila_Mariana = load('./Modelo_Bairros/RandomForestRegressor-Vila_Mariana.joblib')
+
+model_Itaim_Bibi = load('./Modelo_Bairros/RandomForestRegressor-Itaim_Bibi.joblib')
 
 
 
@@ -79,9 +107,11 @@ def main():
         
     
         # Choosen data
-        data = {'Total area': area_total, 'Usef area': area_util, 'Bedroom':quarto, 'Bathroom': banheiro, 'Parking spaces': vaga}
+        data = {'Total area': area_total, 'Useful area': area_util, 'Bedroom':quarto, 'Bathroom': banheiro, 'Parking spaces': vaga}
         st.markdown("### Characteristics")
-        st.write(data)
+        table = pd.DataFrame([data])
+        #st.write(data)
+        st.table(table)
 
         data = np.array([area_total, area_util, quarto, banheiro, vaga]).reshape(1,5)
       
@@ -90,7 +120,7 @@ def main():
         #st.sidebar.markdown("#### 1- Selecione as caracteristicas")
         #st.sidebar.markdown("#### 2- Veja o valor previsto do apartamento")
         #st.sidebar.markdown(" ")
-
+        
         if st.sidebar.button('Submit'):
             #bar = st.progress(0)
             #for i in range(11):
@@ -124,38 +154,43 @@ def main():
             pred =  pred.replace('.','')
 
             #print("Numero de casas:", len(pred))
-       
+            
             st.sidebar.markdown('## Forecast')
             if reg == model_Moema:
-                st.sidebar.markdown("### Score R2: 95%")
+                st.sidebar.markdown("### Score R2: 93%")
             if reg == model_Itaim_Bibi:
                 st.sidebar.markdown("### Score R2: 87%")
             if reg == model_Vila_Mariana:
-               st.sidebar.markdown("### Score R2: 88%")
+               st.sidebar.markdown("### Score R2: 85%")
             
+            col1,col2,col3 = st.columns(3)
             if len(pred) == 6:
                 #print("6 casas")
-                st.subheader("R$ "+pred[0:3]+'.'+pred[3:])
+                #st.subheader("R$ "+pred[0:3]+'.'+pred[3:])
+                with col2:
+                  st.subheader("R$ "+pred[0:3]+'.'+pred[3:])
 
             if len (pred) == 7:
                 #print("7 casas")
-                st.subheader("R$ "+pred[0]+'.'+pred[1:4]+'.'+pred[4:])
-            
+                #st.subheader("R$ "+pred[0]+'.'+pred[1:4]+'.'+pred[4:])
+                with col2:
+                  st.subheader("R$ "+pred[0]+'.'+pred[1:4]+'.'+pred[4:])
+                  
             bar = st.progress(0)
             for i in range(11):
                 bar.progress(i * 10)
                 # wait
                 time.sleep(0.1)
-
+            
     if choice == 'About':
         st.markdown("### Process:")
-        st.write(" - First I did a scrap in 2k pages and gathered 4k apartment sale announcements in São Paulo, Brazil")
-        st.write(" - It became only 3k unique lines")
-        st.write(" - Dataset had 299 neighborhoods, only neighborhoods with more than 50 announcements was used")
-        st.write(" - The first neighborhood in this list was Moema with 161 ")
-        st.write(" - The third was Itaim Bibi with 124 and the eighth was Vila Mariana with 77 ")
+        st.markdown("##### - First I did a scrap in 2k pages and gathered 4k apartment sale announcements in São Paulo, Brazil")
+        st.markdown("##### - It became only 3k unique lines")
+        st.markdown("##### - Dataset had 299 neighborhoods, only neighborhoods with more than 50 announcements was used")
+        st.markdown("##### - The first neighborhood in this list was Moema with 161 ")
+        st.markdown("##### - The third was Itaim Bibi with 124 and the eighth was Vila Mariana with 77 ")
         #st.write(" - The model was built using the data present in each neighborhood")
-        st.markdown("### Supported by Streamlit from github")
+        st.markdown("##### Supported by Streamlit from github")
         st.subheader("by Silvio Lima")
         st.write('https://www.linkedin.com/in/silviocesarlima/')
         #if st.button("Linkedin"):
