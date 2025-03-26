@@ -79,7 +79,7 @@ def main():
 
     
 
-    activities = ["Home", "Search","About"]
+    activities = ["Search","About"]
     choice = st.sidebar.selectbox("Menu",activities)
 
     if choice == "Home":
