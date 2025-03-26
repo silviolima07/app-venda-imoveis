@@ -99,6 +99,11 @@ def main():
 
     if choice == "Search":    
         st.title('Predicting the Sale Price of Apartments by Neighborhood')
+
+        st.write(" ")
+        image1 = Image.open("chaves3.png")
+        st.image(image1,caption="",use_column_width=True)
+        
         # Escolher o bairro para o qual o regressor deve fazer as previsões
         bairro_escolhido = st.sidebar.selectbox("Neighborhood",lista_bairros)
     
