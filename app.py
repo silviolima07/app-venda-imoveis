@@ -83,7 +83,7 @@ def main():
     choice = st.sidebar.selectbox("Menu",activities)
 
     if choice == "Home":
-         html_page = """
+        html_page = """
     <div style="background-color:blue;padding=10px">
         <p style='color:white;text-align:center;font-size:28px;font-family:'Times New Roman'>Predicting the Sale Price of Apartments by Neighborhood</p>
     </div>
