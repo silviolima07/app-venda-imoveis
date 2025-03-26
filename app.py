@@ -98,7 +98,7 @@ def main():
     
 
     if choice == "Search":    
-
+        st.title('Predicting the Sale Price of Apartments by Neighborhood')
         # Escolher o bairro para o qual o regressor deve fazer as previsões
         bairro_escolhido = st.sidebar.selectbox("Neighborhood",lista_bairros)
     
