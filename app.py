@@ -99,12 +99,12 @@ def main():
 
     if choice == "Search":    
         #st.title('Predicting the Sale Price of Apartments by Neighborhood')
-        html_page1 = """
-    <div style="background-color:blue;padding=10px">
-        <p style='color:white;text-align:center;font-size:28px;>Predicting the Sale Price of Apartments by Neighborhood</p>
-    </div>
-              """
-        st.markdown(html_page1, unsafe_allow_html=True)
+        html_page_title = """
+<div style="background-color:black;padding=60px">
+        <p style='text-align:center;font-size:50px;font-weight:bold; color:red'>Predicting the Sale Price of Apartments by Neighborhood'</p>
+</div>
+"""               
+        st.markdown(html_page_title, unsafe_allow_html=True)
 
         st.write(" ")
         image1 = Image.open("chaves3.png")
