@@ -59,12 +59,12 @@ def main():
     """ ExtraTreesRegressor - Imoveis """
     
  
-    html_page = """
+    html_page1 = """
     <div style="background-color:blue;padding=10px">
         <p style='color:white;text-align:center;font-size:28px;font-family:'Times New Roman'>Predicting the Sale Price of Apartments by Neighborhood</p>
     </div>
               """
-    st.markdown(html_page, unsafe_allow_html=True)   
+    st.markdown(html_page1, unsafe_allow_html=True)   
 
     image = Image.open("for-sale.png")
     st.sidebar.image(image,caption="",use_column_width=True)
