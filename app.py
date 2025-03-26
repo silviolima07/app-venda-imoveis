@@ -98,7 +98,7 @@ def main():
     
 
     if choice == "Search":    
-        st.title('Predicting the Sale Price of Apartments by Neighborhood')
+        #st.title('Predicting the Sale Price of Apartments by Neighborhood')
         html_page1 = """
     <div style="background-color:blue;padding=10px">
         <p style='color:white;text-align:center;font-size:28px;>Predicting the Sale Price of Apartments by Neighborhood</p>
